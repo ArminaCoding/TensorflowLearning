@@ -35,7 +35,7 @@ cross_entropy = tf.reduce_mean(-tf.reduce_sum(y_ * tf.log(y),
                                               reduction_indices=[1]))
 train_step = tf.train.AdagradOptimizer(0.3).minimize(cross_entropy)
 
-# ### step3：训练 ####
+# ### step3：训练 #####
 # 输入数据集，设置keep_prob为0.75
 tf.global_variables_initializer().run()
 for i in range(1000):
